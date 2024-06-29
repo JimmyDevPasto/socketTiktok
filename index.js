@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: `*`, // Ajusta según donde esté tu frontend
+    origin: `${process.env.FRONTEND}`, // Ajusta según donde esté tu frontend ${process.env.FRONTEND}
   }
 });
 
